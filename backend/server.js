@@ -25,7 +25,8 @@ const connectDB = async () => {
   }
 };
 
-connectDB();
+// ❌ REMOVE this line
+// connectDB();
 
 // ✅ ROUTES
 app.use("/api/transactions", require("./routes/TransactionRoutes"));
@@ -36,7 +37,8 @@ app.get("/", (req, res) => {
   res.send("API running...");
 });
 
-// ❌ NO app.listen()
-
-// ✅ EXPORT
-module.exports = app;
+// ✅ SERVERLESS EXPORT
+module.exports = async (req, res) => {
+  await connectDB();
+  return app(req, res);
+};
