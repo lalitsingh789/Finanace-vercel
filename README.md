@@ -25,6 +25,28 @@ A simple personal finance tracker built with a React Native Expo frontend and an
 - Auto-refresh transaction data from backend
 - Local state updates for instant UI response
 
+## Screenshots
+
+The following app screens are included in the project visuals:
+
+- **Home Screen**
+- **History Screen**
+- **Add Expense Screen**
+- **Budget Planner**
+- **Analytics Screen**
+
+Use these markdown references after saving the screenshot files under a `screenshots/` folder:
+
+```md
+![Home Screen](screenshots/home-screen.jpeg)
+![History Screen](screenshots/history-screen.jpeg)
+![Add Expense Screen](screenshots/add-expense.jpeg)
+![Budget Planner](screenshots/budget-planner.jpeg)
+![Analytics Screen](screenshots/analytics-screen.jpeg)
+```
+
+> Place your app screenshots in `screenshots/` and rename them as needed.
+
 ## Backend API
 
 - `GET /api/transactions` - list all transactions
@@ -33,6 +55,20 @@ A simple personal finance tracker built with a React Native Expo frontend and an
 - `PUT /api/transactions/:id` - update a transaction
 - `DELETE /api/transactions/:id` - remove a transaction
 - `GET /api/analytics/summary` - get analytics summary data
+
+## APK Download
+
+- Download the app APK here: [Personal Finance Companion APK](https://example.com/PersonalFinanceCompanion.apk)
+
+> Replace the above URL with your actual hosted APK link once available.
+
+### Screenshot Reference
+
+You can reference the local screenshot path in markdown if opening the README locally:
+
+```md
+![App Screenshot](c:/Users/lalit/Downloads/WhatsApp Image 2026-04-06 at 8.07.57 PM.jpeg)
+```
 
 ## Run Locally
 
