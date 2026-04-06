@@ -1,105 +1,185 @@
-# Personal Finance Companion
+# 📱 Personal Finance Companion
 
-A simple personal finance tracker built with a React Native Expo frontend and an Express/MongoDB backend.
+A modern and user-friendly **Personal Finance Tracker App** built using **React Native (Expo)** and **Node.js + MongoDB**.
+This app helps users manage income, expenses, budgets, and analyze spending habits in real-time.
 
-## Project Structure
+---
 
-- `frontend/` - React Native Expo mobile app
-  - `App.js` - app entry point
-  - `navigation/` - app navigation setup
-  - `screens/` - UI screens for income, expense, goals, history, analytics, and budget
-  - `context/FinanceContext.js` - shared transaction state and API sync logic
+## 🚀 Features
 
-- `backend/` - Express API server
-  - `server.js` - entry point and serverless export
-  - `routes/` - API routes for transactions and analytics
-  - `controllers/` - route handlers for transaction management and analytics
-  - `models/Transaction.js` - MongoDB transaction schema
-  - `config/db.js` - database connection logic
+* 💰 Add, edit, and delete income & expense transactions
+* 📊 View analytics with charts and insights
+* 🧾 Track transaction history with filters
+* 🎯 Budget planner for different categories
+* ⚡ Real-time UI updates
+* 🎨 Clean and modern UI design
 
-## Features
+---
 
-- Add, edit, and delete income and expense transactions
-- Track transaction categories, notes, date/time, and amounts
-- View analytics and budget insights
-- Auto-refresh transaction data from backend
-- Local state updates for instant UI response
+## 📥 Download APK
 
-## Screenshots
+👉 **[Download App](https://your-apk-link.com)**
 
-The following app screens are included in the project visuals:
+> Replace this link with your actual APK link (Google Drive / Firebase / Hosting)
 
-- **Home Screen**
-- **History Screen**
-- **Add Expense Screen**
-- **Budget Planner**
-- **Analytics Screen**
+---
 
-Use these markdown references after saving the screenshot files under a `screenshots/` folder:
+## 📸 App Screenshots
 
-```md
-![Home Screen](screenshots/home-screen.jpeg)
-![History Screen](screenshots/history-screen.jpeg)
-![Add Expense Screen](screenshots/add-expense.jpeg)
-![Budget Planner](screenshots/budget-planner.jpeg)
-![Analytics Screen](screenshots/analytics-screen.jpeg)
+### 🏠 Home Screen
+
+![Home](screenshots/homescreen.png)
+
+### 📜 Transaction History
+
+![History](screenshots/history.jpeg)
+
+### 📊 Analytics Screen
+
+![Analytics](screenshots/analytics.jpeg)
+
+### 💰 Budget Planner
+
+![Budget](screenshots/budget.jpeg)
+
+### 🎯 Goal Planner
+
+![Goal](screenshots/goal.jpeg)
+
+### ➕ Add Expense
+
+![Add Expense](screenshots/add-expense.jpeg)
+
+### ➕ Add Income
+
+![Add Income](screenshots/add-income.jpeg)
+
+---
+
+## 🛠 Tech Stack
+
+### 📱 Frontend
+
+* React Native (Expo)
+* React Navigation
+* Context API
+* React Native Chart Kit
+
+### 🌐 Backend
+
+* Node.js
+* Express.js
+* MongoDB (Mongoose)
+
+---
+
+## 📂 Project Structure
+
+```
+Personal-Finance-Companion/
+│
+├── frontend/                 # React Native App
+│   ├── screens/
+│   ├── navigation/
+│   ├── context/
+│   └── styles/
+│
+├── backend/                 # Express Server
+│   ├── routes/
+│   ├── controllers/
+│   ├── models/
+│   └── config/
+│
+├── screenshots/             # App UI Images
+└── README.md
 ```
 
-> Place your app screenshots in `screenshots/` and rename them as needed.
+---
 
-## Backend API
+## ⚙️ Run Locally
 
-- `GET /api/transactions` - list all transactions
-- `GET /api/transactions/:id` - get transaction by ID
-- `POST /api/transactions` - create a new transaction
-- `PUT /api/transactions/:id` - update a transaction
-- `DELETE /api/transactions/:id` - remove a transaction
-- `GET /api/analytics/summary` - get analytics summary data
+### 🔹 Backend Setup
 
-## APK Download
-
-- Download the app APK here: [Personal Finance Companion APK](https://example.com/PersonalFinanceCompanion.apk)
-
-> Replace the above URL with your actual hosted APK link once available.
-
-### Screenshot Reference
-
-You can reference the local screenshot path in markdown if opening the README locally:
-
-```md
-![App Screenshot](c:/Users/lalit/Downloads/WhatsApp Image 2026-04-06 at 8.07.57 PM.jpeg)
+```bash
+cd backend
+npm install
+npm start
 ```
 
-## Run Locally
+Create a `.env` file:
 
-### Backend
+```
+MONGO_URI=your_mongodb_connection_string
+```
 
-1. Copy `.env` with `MONGO_URI` set to your MongoDB connection string.
-2. Install dependencies:
-   ```bash
-   cd backend
-   npm install
-   ```
-3. Start the server:
-   ```bash
-   npm start
-   ```
+---
 
-### Frontend
+### 🔹 Frontend Setup
 
-1. Install dependencies:
-   ```bash
-   cd frontend
-   npm install
-   ```
-2. Start Expo:
-   ```bash
-   npm start
-   ```
+```bash
+cd frontend
+npm install
+npm start
+```
 
-> The frontend currently fetches transactions from a locally configured backend address in `frontend/context/FinanceContext.js`.
+---
 
-## Notes
+## 🌐 API Endpoints
 
-- The backend is prepared for serverless deployment with a serverless export in `backend/server.js`.
-- The frontend is built with Expo and uses React Navigation, Async Storage, and native date/time picker.
+| Method | Endpoint               | Description          |
+| ------ | ---------------------- | -------------------- |
+| GET    | /api/transactions      | Get all transactions |
+| POST   | /api/transactions      | Add transaction      |
+| PUT    | /api/transactions/:id  | Update transaction   |
+| DELETE | /api/transactions/:id  | Delete transaction   |
+| GET    | /api/analytics/summary | Get analytics data   |
+
+---
+
+## ⚠️ Important Notes
+
+* Ensure backend is running before starting frontend
+* Update API URL in:
+
+  ```
+  frontend/context/FinanceContext.js
+  ```
+* Use your **local IP instead of localhost**
+
+Example:
+
+```js
+const BASE_URL = "http://192.168.X.X:5000";
+```
+
+---
+
+## 🚀 Future Improvements
+
+* 🔐 User authentication (Login/Signup)
+* ☁️ Cloud sync & backup
+* 📊 Advanced analytics & AI insights
+* 🌙 Dark mode support
+
+---
+
+## 👨‍💻 Author
+
+**Lalit Singh**
+📍 Bhubaneswar, India
+
+---
+
+## ⭐ Support
+
+If you like this project:
+
+⭐ Star this repository
+🍴 Fork it
+📢 Share with others
+
+---
+
+## 📄 License
+
+This project is open-source and available under the **MIT License**.
