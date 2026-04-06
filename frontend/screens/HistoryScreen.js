@@ -31,7 +31,7 @@ export default function HistoryScreen({ navigation }) {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://192.168.1.19:5000/api/transactions");
+      const res = await fetch("https://finanace-vercel.vercel.app//api/transactions");
       const json = await res.json();
       setData(json.reverse()); // latest first
     } catch (err) {

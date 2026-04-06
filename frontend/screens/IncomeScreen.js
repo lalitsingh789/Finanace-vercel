@@ -57,8 +57,8 @@ export default function IncomeScreen({ navigation, route }) {
 
     try {
       const url = transaction
-        ? `http://192.168.1.19:5000/api/transactions/${transaction._id}`
-        : "http://192.168.1.19:5000/api/transactions";
+        ? `https://finanace-vercel.vercel.app//api/transactions/${transaction._id}`
+        : "https://finanace-vercel.vercel.app//api/transactions";
 
       const method = transaction ? "PUT" : "POST";
 

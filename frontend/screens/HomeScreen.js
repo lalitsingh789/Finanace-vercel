@@ -22,7 +22,7 @@ export default function HomeScreen({ navigation }) {
   const fetchTransactions = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://192.168.1.19:5000/api/transactions");
+      const response = await fetch("https://finanace-vercel.vercel.app//api/transactions");
       const data = await response.json();
       setTransactions(data.reverse());
     } catch (error) {

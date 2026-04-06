@@ -17,7 +17,7 @@ export default function TransactionDetailScreen({ route, navigation }) {
   const fetchTransaction = async () => {
     try {
       const res = await fetch(
-        `http://192.168.1.19:5000/api/transactions/${transaction._id}`
+        `https://finanace-vercel.vercel.app//api/transactions/${transaction._id}`
       );
       const data = await res.json();
       setTransaction(data);
@@ -36,7 +36,7 @@ export default function TransactionDetailScreen({ route, navigation }) {
   const handleDelete = async () => {
     try {
       await fetch(
-        `http://192.168.1.19:5000/api/transactions/${transaction._id}`,
+        `https://finanace-vercel.vercel.app//api/transactions/${transaction._id}`,
         { method: "DELETE" }
       );
 
