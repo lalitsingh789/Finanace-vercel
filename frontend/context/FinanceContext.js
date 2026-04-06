@@ -8,7 +8,7 @@ export const FinanceProvider = ({ children }) => {
   // 🔥 FETCH FROM BACKEND
   const fetchTransactions = async () => {
     try {
-      const res = await fetch("http://192.168.1.19:5000/api/transactions");
+      const res = await fetch("https://finanace-vercel.vercel.app/api/transactions");
       const data = await res.json();
       setTransactions(data);
     } catch (err) {
