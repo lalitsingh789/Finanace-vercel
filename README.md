@@ -1,128 +1,65 @@
 # 📱 Personal Finance Companion
 
-A modern and user-friendly **Personal Finance Tracker App** built using **React Native (Expo)** and **Node.js + MongoDB**.
-This app helps users manage income, expenses, budgets, and analyze spending habits in real-time.
+A modern and user-friendly **Personal Finance Tracker** built with **React Native (Expo)** for the mobile frontend and **Node.js + MongoDB** for the backend.
 
----
+## 🚀 What it does
 
-## 🚀 Features
+- Manage income and expense transactions
+- Track transaction categories, notes, and dates
+- View spending analytics and visual charts
+- Use a budget planner to track category limits
+- Automatically refresh app data from the backend
+- Keep local UI state for instant updates
 
-* 💰 Add, edit, and delete income & expense transactions
-* 📊 View analytics with charts and insights
-* 🧾 Track transaction history with filters
-* 🎯 Budget planner for different categories
-* ⚡ Real-time UI updates
-* 🎨 Clean and modern UI design
+## 🧩 Project Structure
 
----
+- `frontend/` — React Native Expo mobile app
+  - `App.js` — app entry point
+  - `navigation/` — app navigation setup
+  - `screens/` — UI screens for home, history, analytics, goals, income, expense, and budget
+  - `context/FinanceContext.js` — shared transaction state and backend sync logic
+  - `styles/` — component styling
 
-## 📥 Download APK
+- `backend/` — Express API server
+  - `server.js` — server entry point and serverless export
+  - `routes/` — API route definitions
+  - `controllers/` — business logic for transactions and analytics
+  - `models/Transaction.js` — MongoDB transaction schema
+  - `config/db.js` — database connection logic
 
-👉 **[Download App](https://your-apk-link.com)**
+- `screenshots/` — app UI images included for the README
 
-> Replace this link with your actual APK link (Google Drive / Firebase / Hosting)
+## 📸 Screenshots
 
----
-
-## 📸 App Screenshots
+The app screenshots are loaded from the local `screenshots/` folder.
 
 ### 🏠 Home Screen
 
-![Home](screenshots/homescreen.png)
+![Home Screen](screenshots/homescreen.jpeg)
 
 ### 📜 Transaction History
 
-![History](screenshots/history.jpeg)
+![History Screen](screenshots/history screen.jpeg)
 
-### 📊 Analytics Screen
+### 💰 Add Expense
 
-![Analytics](screenshots/analytics.jpeg)
-
-### 💰 Budget Planner
-
-![Budget](screenshots/budget.jpeg)
-
-### 🎯 Goal Planner
-
-![Goal](screenshots/goal.jpeg)
-
-### ➕ Add Expense
-
-![Add Expense](screenshots/add-expense.jpeg)
+![Add Expense Screen](screenshots/expense add screen.jpeg)
 
 ### ➕ Add Income
 
-![Add Income](screenshots/add-income.jpeg)
+![Add Income Screen](screenshots/income add screen.jpeg)
 
----
+### 💼 Budget Planner
 
-## 🛠 Tech Stack
+![Budget Planner](screenshots/budget planner screen.jpeg)
 
-### 📱 Frontend
+### 🎯 Goal Planner
 
-* React Native (Expo)
-* React Navigation
-* Context API
-* React Native Chart Kit
+![Goal Planner](screenshots/goal planner screen.jpeg)
 
-### 🌐 Backend
+### 📊 Analytics Screen
 
-* Node.js
-* Express.js
-* MongoDB (Mongoose)
-
----
-
-## 📂 Project Structure
-
-```
-Personal-Finance-Companion/
-│
-├── frontend/                 # React Native App
-│   ├── screens/
-│   ├── navigation/
-│   ├── context/
-│   └── styles/
-│
-├── backend/                 # Express Server
-│   ├── routes/
-│   ├── controllers/
-│   ├── models/
-│   └── config/
-│
-├── screenshots/             # App UI Images
-└── README.md
-```
-
----
-
-## ⚙️ Run Locally
-
-### 🔹 Backend Setup
-
-```bash
-cd backend
-npm install
-npm start
-```
-
-Create a `.env` file:
-
-```
-MONGO_URI=your_mongodb_connection_string
-```
-
----
-
-### 🔹 Frontend Setup
-
-```bash
-cd frontend
-npm install
-npm start
-```
-
----
+![Analytics Screen](screenshots/analytics screen.jpeg)
 
 ## 🌐 API Endpoints
 
@@ -134,17 +71,35 @@ npm start
 | DELETE | /api/transactions/:id  | Delete transaction   |
 | GET    | /api/analytics/summary | Get analytics data   |
 
----
+## ⚙️ Run Locally
+
+### Backend Setup
+
+```bash
+cd backend
+npm install
+npm start
+```
+
+Create a `.env` file:
+
+```text
+MONGO_URI=your_mongodb_connection_string
+```
+
+### Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm start
+```
 
 ## ⚠️ Important Notes
 
-* Ensure backend is running before starting frontend
-* Update API URL in:
-
-  ```
-  frontend/context/FinanceContext.js
-  ```
-* Use your **local IP instead of localhost**
+- Start the backend before opening the frontend
+- Update the API URL in `frontend/context/FinanceContext.js`
+- Use your local IP address rather than `localhost` when testing on a physical device
 
 Example:
 
@@ -152,33 +107,32 @@ Example:
 const BASE_URL = "http://192.168.X.X:5000";
 ```
 
----
+## 🛠 Tech Stack
+
+### Frontend
+
+- React Native (Expo)
+- React Navigation
+- Context API
+- React Native Chart Kit
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB with Mongoose
 
 ## 🚀 Future Improvements
 
-* 🔐 User authentication (Login/Signup)
-* ☁️ Cloud sync & backup
-* 📊 Advanced analytics & AI insights
-* 🌙 Dark mode support
-
----
+- User authentication (login/signup)
+- Cloud sync and backup
+- Enhanced analytics and insights
+- Dark mode support
 
 ## 👨‍💻 Author
 
 **Lalit Singh**
 📍 Bhubaneswar, India
-
----
-
-## ⭐ Support
-
-If you like this project:
-
-⭐ Star this repository
-🍴 Fork it
-📢 Share with others
-
----
 
 ## 📄 License
 
